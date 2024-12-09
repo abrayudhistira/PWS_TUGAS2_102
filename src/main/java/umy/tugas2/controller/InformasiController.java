@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import umy.tugas2.model.Informasi;
 
 @RestController
-@CrossOrigin
+@RequestMapping("/informasi")
+@CrossOrigin(origins = "*")
+
 public class InformasiController {
-    @GetMapping("/informasi")
+    @GetMapping
     public Informasi getInformasi() {
         return new Informasi("Abra Yudhistira R", "20220140102");
     }
